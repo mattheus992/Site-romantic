@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Para Você ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, #000000, #1a001a);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background: crimson;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.fade {
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  animation: subir 5s linear infinite;
+}
+
+@keyframes subir {
+  0% { transform: translateY(100vh); opacity: 1;}
+  100% { transform: translateY(-10vh); opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="inicio" class="container">
+  <h1>Eu tenho algo importante pra te dizer...</h1>
+  <button onclick="iniciar()">Clique aqui ❤️</button>
+</div>
+
+<div id="conteudo" class="container hidden">
+  <h1 class="fade">Para o amor da minha vida ❤️</h1>
+
+  <p class="fade">
+  Eu não sei em que momento tudo mudou…  
+  mas sei que hoje, você é a melhor parte dos meus dias.
+  </p>
+
+  <p class="fade">
+  Se eu pudesse escolher mil vezes…  
+  eu escolheria você em todas elas.
+  </p>
+
+  <p class="fade">
+  Isso aqui é simples… mas é de coração.  
+  Eu te amo ❤️
+  </p>
+</div>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function iniciar() {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("conteudo").classList.remove("hidden");
+
+  document.getElementById("musica").play();
+
+  gerarCoracoes();
+}
+
+function
